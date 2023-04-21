@@ -1,20 +1,20 @@
 import React from "react";
 
 function Article({post,date='January 1, 1970', preview, minutes}) {
-  let readTime='';
+  let readTimeEmoji='';
   if(minutes<30){
   const coffeeCups = Math.ceil(minutes / 5);
-  readTime = "☕️".repeat(coffeeCups);
+  readTimeEmoji = "☕️".repeat(coffeeCups);
   
 }else if(minutes>=30){
   const coffeeCups = Math.ceil(minutes / 10);
-  readTime = "🍱".repeat(coffeeCups);
+  readTimeEmoji = "🍱".repeat(coffeeCups);
 }
   return (
     <article>
       <h3>{post} </h3>
       <small>
-        {date} <span> {minutes} {readTime} min read</span>
+        {date}, <span> {minutes} {readTimeEmoji} min read</span>
       </small>
       <p>{preview}</p>
     </article>
