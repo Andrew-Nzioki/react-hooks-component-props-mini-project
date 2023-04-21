@@ -1,14 +1,15 @@
 import React from "react";
 import Article from "./Article";
-function ArticleList(props) {
+function ArticleList({posts}) {
   return (
     <main>
-      {props.dataList.posts.map((article) => (
+      {posts.map((post) => (
         <Article
-          post={article.title}
-          date={article.date}
-          preview={article.preview}
-          minutes={article.minutes}
+        key={post.id}
+          post={post.title}
+          date={post.date}
+          preview={post.preview}
+          minutes={post.minutes}
         />
       ))}
     </main>

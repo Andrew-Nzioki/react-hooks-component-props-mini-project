@@ -1,16 +1,16 @@
 import React from "react";
 
-function About(props) {
-  console.log(props);
+function About({image="https://via.placeholder.com/215",about}) {
+  
   return (
     <div>
       <aside>
         <img
-          src={props.data.image}
+          src={image}
           alt="blog
     logo"
         />
-        <p>{props.data.about}</p>
+        <p>{about}</p>
       </aside>
     </div>
   );

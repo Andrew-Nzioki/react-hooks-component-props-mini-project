@@ -1,10 +1,10 @@
 import React from "react";
 
-function Header(props) {
-  const placeholder = "https://via.placeholder.com/215";
+function Header({name}) {
+ 
   return (
     <div>
-      <h1>{props.data.name}</h1>
+      <h1>{name}</h1>
     </div>
   );
 }
